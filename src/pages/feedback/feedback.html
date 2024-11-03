@@ -1,0 +1,80 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Feedback Form</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div class="root">
+      <h3>Feedback</h3>
+      <form name="feedback" class="feedback_form">
+        <blockquote>
+          You can leave your request or question for our specialist.
+        </blockquote>
+        <fieldset>
+          <legend>Your contact info</legend>
+          <label for="fio">Full name</label>
+          <input
+            type="text"
+            name="fio"
+            id="fio"
+            size="50"
+            placeholder="John Doe"
+            required
+          />
+          <br />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="mail"
+            id="email"
+            size="50"
+            maxlength="50"
+            placeholder="example@mail.com"
+            required
+          />
+          <br />
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            size="50"
+            maxlength="50"
+            placeholder="098-765-43-21"
+            required
+          />
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend>Your request</legend>
+          <label for="issue">Topic of request</label>
+          <!-- dataset of often used topics -->
+          <datalist id="topics">
+            <option value="Technical request"></option>
+            <option value="Plan change"></option>
+            <option value="Suggestion"></option>
+            <option value="Financial"></option>
+          </datalist>
+          <input
+            type="text"
+            list="topics"
+            maxlength="50"
+            placeholder="Topic of your request"
+            required
+          />
+          <br />
+          <label for="message">Message</label>
+          <br />
+          <textarea
+            rows="10"
+            cols="50"
+            placeholder="Dear <ShopName>, I would like to suggest ..."
+            required
+          ></textarea>
+        </fieldset>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
