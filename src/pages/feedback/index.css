@@ -108,3 +108,33 @@
   background: white;
   cursor: pointer;
 }
+
+@media screen and (max-width: 425px) {
+  .root {
+    padding: 0 15px;
+    justify-content: start;
+    height: fit-content;
+  }
+
+  .title {
+    margin-top: 15px;
+  }
+
+  .feedback-form {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .feedback-form__fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-form__input,
+  .feedback-form__textarea {
+    font-size: 18px;
+  }
+
+  .feedback-form__input {
+    margin-bottom: 20px;
+  }
+}
