@@ -6,49 +6,58 @@
   </head>
   <body>
     <div class="root">
-      <h3>Feedback</h3>
-      <form name="feedback" class="feedback_form">
-        <blockquote>
+      <h3 class="title">Feedback</h3>
+      <form name="feedback" class="feedback-form">
+        <blockquote class="feedback-form__quote">
           You can leave your request or question for our specialist.
         </blockquote>
-        <fieldset>
-          <legend>Your contact info</legend>
+
+        <fieldset class="feedback-form__fieldset">
+          <legend class="feedback-form__legend">Your contact info</legend>
+
           <label for="fio">Full name</label>
           <input
+            class="feedback-form__input feedback-form__input__focused"
             type="text"
             name="fio"
             id="fio"
             size="50"
             placeholder="John Doe"
+            pattern="[A-Z]\w+\s[A-Z]\w+"
             required
           />
-          <br />
+
           <label for="email">Email</label>
           <input
             type="email"
             name="mail"
+            class="feedback-form__input feedback-form__input__focused"
             id="email"
             size="50"
             maxlength="50"
             placeholder="example@mail.com"
+            pattern="[\w\.]+@[a-z]+[\.][a-z]{2,4}"
             required
           />
-          <br />
+
           <label for="phone">Phone</label>
           <input
             type="tel"
             name="phone"
             id="phone"
             size="50"
+            class="feedback-form__input feedback-form__input__focused"
             maxlength="50"
             placeholder="098-765-43-21"
+            pattern="0[0-9]{9}"
             required
           />
-          <br />
         </fieldset>
-        <fieldset>
-          <legend>Your request</legend>
-          <label for="issue">Topic of request</label>
+
+        <fieldset class="feedback-form__fieldset feedback-form__issue">
+          <legend class="feedback-form__legend">Your request</legend>
+
+          <label for="issue_topic_input">Topic of request</label>
           <!-- dataset of often used topics -->
           <datalist id="topics">
             <option value="Technical request"></option>
@@ -57,23 +66,27 @@
             <option value="Financial"></option>
           </datalist>
           <input
+            id="issue_topic_input"
             type="text"
             list="topics"
             maxlength="50"
+            class="feedback-form__input feedback-form__input__focused"
             placeholder="Topic of your request"
             required
           />
-          <br />
-          <label for="message">Message</label>
-          <br />
+
+          <label for="issue_message_input">Message</label>
           <textarea
+            id="issue_message_input"
             rows="10"
             cols="50"
+            wrap="hard"
+            class="feedback-form__textarea"
             placeholder="Dear <ShopName>, I would like to suggest ..."
             required
           ></textarea>
         </fieldset>
-        <button type="submit">Send</button>
+        <button type="submit" class="button button_hover">Send</button>
       </form>
     </div>
   </body>
